@@ -79,10 +79,10 @@ extern "C" {
         splBitArray.method("__construct", &SplBitArray::__construct, { Php::ByVal("size", Php::Type::Numeric, false) });
         splBitArray.method("getSize", &SplBitArray::getSize);
         splBitArray.method("getSizeInBytes", &SplBitArray::getSizeInBytes);
-        splBitArray.method("ensureCapacity", &SplBitArray::ensureCapacity, { Php::ByVal("size", Php::Type::Numeric, false) });
-        splBitArray.method("get", &SplBitArray::get, { Php::ByVal("index", Php::Type::Numeric, false) });
-        splBitArray.method("set", &SplBitArray::set, { Php::ByVal("index", Php::Type::Numeric, false) });
-        splBitArray.method("flip", &SplBitArray::flip, { Php::ByVal("index", Php::Type::Numeric, false) });
+        splBitArray.method("ensureCapacity", &SplBitArray::ensureCapacity, { Php::ByVal("size", Php::Type::Numeric, true) });
+        splBitArray.method("get", &SplBitArray::get, { Php::ByVal("index", Php::Type::Numeric, true) });
+        splBitArray.method("set", &SplBitArray::set, { Php::ByVal("index", Php::Type::Numeric, true) });
+        splBitArray.method("flip", &SplBitArray::flip, { Php::ByVal("index", Php::Type::Numeric, true) });
         splBitArray.method("clear", &SplBitArray::clear);
 
         splBitArrayExtension.add(std::move(splBitArray));
